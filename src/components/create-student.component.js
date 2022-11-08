@@ -4,6 +4,14 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 export default class CreateStudent extends Component {
+  constructor(props) {
+    super(props);
+    this.onChangeStudentName = this.onChangeStudentName.bind(this)
+    this.onChangeStudentEmail = this.onChangeStudentEmail.bind(this)
+    this.onChangeStudentRollno = this.onChangeStudentRollno.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+  
   render() {
     return (
       <div class="form-wrapper">

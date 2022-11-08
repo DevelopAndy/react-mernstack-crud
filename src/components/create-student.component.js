@@ -17,6 +17,24 @@ export default class CreateStudent extends Component {
       rollno:"",
      }
   }
+
+  onChangeStudentName(e) {
+    this.setState({name: e.target.value})
+  }
+  onChangeStudentEmail(e) {
+    this.setState({email: e.target.value})
+  }
+  onChangeStudentRollno(e) {
+    this.setState({rollno: e.target.value})
+  }
+  onSubmit(e) {
+    e.preventDefault();
+    const StundentObject = {
+      name: this.state.name,
+      email: this.state.email,
+      rollno: this.state.rollno,
+    }
+  }
   
   render() {
     return (

@@ -10,6 +10,12 @@ export default class CreateStudent extends Component {
     this.onChangeStudentEmail = this.onChangeStudentEmail.bind(this)
     this.onChangeStudentRollno = this.onChangeStudentRollno.bind(this)
     this.onSubmit = this.onSubmit.bind(this)
+
+    this.state = { 
+      name:"",
+      email:"",
+      rollno:"",
+     }
   }
   
   render() {

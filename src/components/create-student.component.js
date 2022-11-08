@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import axios from "axios";
 
 export default class CreateStudent extends Component {
   constructor(props) {
@@ -34,6 +35,11 @@ export default class CreateStudent extends Component {
       email: this.state.email,
       rollno: this.state.rollno,
     }
+
+    axios
+    .post("http//:localhost:4000/students/create-student", StundentObject)
+    .then((res) => console.log(res.data));
+    this.setState({name: "", email: "", rollno: ""});
   }
   
   render() {

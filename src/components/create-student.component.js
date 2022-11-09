@@ -45,18 +45,18 @@ export default class CreateStudent extends Component {
   render() {
     return (
       <div class="form-wrapper">
-        <Form>
+        <Form onSubmit={this.onSubmit}>
           <Form.Group controlId="Name">
             <Form.Label>Nombre</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control type="text" value={this.state.name} onChange={this.onChangeStudentName}/>
           </Form.Group>
           <Form.Group controlId="Email">
             <Form.Label>Correo Electrónico</Form.Label>
-            <Form.Control type="email" />
+            <Form.Control type="email" value={this.state.email} onChange={this.onChangeStudentEmail} />
           </Form.Group>
           <Form.Group controlId="Name">
             <Form.Label>Código</Form.Label>
-            <Form.Control type="text" />
+            <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
           </Form.Group>
           <Button
             variant="dark"

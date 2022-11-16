@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import axios from "axios";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import axios from "axios";
 
 export default class EditStudent extends Component {
   constructor(props) {
@@ -13,6 +12,7 @@ export default class EditStudent extends Component {
     this.onChangeStudentRollno = this.onChangeStudentRollno.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
+    // State
     this.state = {
       name: "",
       email: "",
